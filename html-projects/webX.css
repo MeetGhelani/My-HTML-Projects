@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Dosis', sans-serif;
+    height: 100vh;
+}
+
+.container{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: rgb(207, 224, 240);
+}
+
+.nav{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 90px;
+    width: 100%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: rgb(144, 189, 212);
+}
+
+.nlc a{
+    text-decoration: none;
+    color: rgb(5, 87, 182);
+    font-size: 1.5em;
+    padding-top: 50px;
+    padding-left: 180px;
+}
+
+.nav .logo a{
+    position: absolute;
+    top: 16%;
+    left: 46.5%;
+    font-size: 2em;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    color: rgb(5, 87, 182);
+    text-decoration: none;
+}
+
+.logo span{
+    color: rgb(242, 97,0);
+    font-size: 1.2em;
+}
+
+.nrc a{
+    text-decoration: none;
+    color: rgb(5, 87, 182);
+    float: right;
+}

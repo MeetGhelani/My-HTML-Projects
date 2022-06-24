@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(25, 4, 41);
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.nav{
+    height: 85px;
+    width: 100%;
+    background-color: rgb(64, 0, 113);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    font-size: 2.8em;
+    color: aliceblue;
+    letter-spacing: 5px;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.gamecontainer{
+    justify-content: center;
+    display: flex;
+    margin-top: 120px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 8em);
+    grid-template-rows: repeat(3, 8em);
+    color: aliceblue;
+}
+
+.box{
+    border: 4px solid rgb(64, 0, 113);
+    font-size: 5em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.box:hover{
+    background-color: rgb(159, 54, 238);
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+h1{
+    color: aliceblue;
+    letter-spacing: 4px;
+    padding-left: 100px;
+    padding-top: 50px;
+}
+
+.info{
+    color: aliceblue;
+    font-size: 2em;
+    letter-spacing: 4px;
+    margin-left: 220px;
+    margin-top: 0px;
+}
+
+#reset{
+    font-size: 2em;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    padding: 5px 8px;
+    background-color: rgb(25, 4, 41);
+    border: 5px solid aliceblue;
+    color: aliceblue;
+    letter-spacing: 4px;
+    margin-top: 50px;
+    margin-left: 330px;
+}
+
+#reset:hover{
+    color: aliceblue;
+    background-color: rgb(159, 54, 238);
+}
