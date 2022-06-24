@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital - Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="file:///D:/meetg/Desktop/ps_p/small-clock.png">
+
+    <script>
+        
+        var y = setInterval(function(){
+        
+        let hours = document.getElementById('hours');
+        let min = document.getElementById('min');
+        let sec = document.getElementById('sec');
+        let ampm = document.getElementById('ampm');
+
+        let hh = document.getElementById('hh');
+        let mm = document.getElementById('mm');
+        let ss = document.getElementById('ss');
+
+        let hr_dot = document.querySelector('.hr_dot');
+        let min_dot = document.querySelector('.min_dot');
+        let sec_dot = document.querySelector('.sec_dot');
+
+        var d = new Date(); 
+        var h = d.getHours();
+        var m = d.getMinutes();
+        var s = d.getSeconds();
+        var session = "AM";
+
+        if(h == 12){
+            h = 12;
+            session = "PM";
+        }
+        if(h > 12){
+            h -= 12;
+            session = "PM";
+        }
+
+        h = (h < 10) ? "0" + h : h;
+        m = (m < 10) ? "0" + m : m;
+        s = (s < 10) ? "0" + s : s;
+
+        hours.innerHTML = h + "<br><span>HOURS</span>";
+        min.innerHTML = m + "<br><span>MINUTES</span>";
+        sec.innerHTML = s + "<br><span>SECONDS</span>";
+        ampm.innerHTML = session;
+
+        hh.style.strokeDashoffset = 440 - (440 * h) / 12 ;
+        mm.style.strokeDashoffset = 440 - (440 * m) / 60 ;
+        ss.style.strokeDashoffset = 440 - (440 * s) / 60 ;   
+        
+        hr_dot.style.transform = `rotate(${h * 30}deg)`;
+        min_dot.style.transform = `rotate(${m * 6}deg)`;
+        sec_dot.style.transform = `rotate(${s * 6}deg)`;
+
+    },1000);
+    
+    var y = setInterval(function(){
+        
+        var date = new Date();
+        var day = date.getDate();
+
+        const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        var name = month[date.getMonth()];
+
+        var year = date.getFullYear();    
+        
+        document.getElementById("date").innerHTML = day + "th " + name + " , " + year  ;
+        },1000)
+    
+    </script>
+
+</head>
+
+<body>
+    <span id="date"></span>
+    <div id="time">
+        <div class="circle" style="--clr: rgb(238, 90, 90);">
+            <div class="dots hr_dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70" ></circle>
+                <circle cx="70" cy="70" r="70" id="hh"></circle>
+            </svg>
+            <div id="hours"></div>
+        </div>
+
+        <div class="circle" style="--clr: rgb(233, 219, 69);">
+            <div class="dots min_dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70" ></circle>
+                <circle cx="70" cy="70" r="70" id="mm" ></circle>
+            </svg>
+            <div id="min"></div>
+        </div>
+
+        <div class="circle" style="--clr: rgb(107, 210, 244);">
+            <div class="dots sec_dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70" ></circle>
+                <circle cx="70" cy="70" r="70" id="ss" ></circle>
+            </svg>
+            <div id="sec"></div>
+        </div>
+
+        <div class="ap">
+            <div id="ampm"></div>
+        </div>
+    </div>
+
+</body>
+</html>
